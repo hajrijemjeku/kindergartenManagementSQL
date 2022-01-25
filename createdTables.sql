@@ -25,7 +25,7 @@ name char(10)
 create table Adults_Roles(
 adultid int not null,
 roleid int not null,
-description varchar(30),
+description varchar(50),
 -- primary key(adultid, roleid), 
 foreign key (adultid) references Adults(aid) on delete cascade on update cascade,
 foreign key (roleid) references Roles(rid) on delete cascade on update cascade
@@ -70,7 +70,7 @@ firstname varchar(20),
 lastname varchar(20),
 gender enum('M','F'),
 image varchar(200),
-age datetime,
+birthdate date,
 created_at timestamp default current_timestamp not null,
 updated_at timestamp,
 foreign key (adultid) references Adults(aid) on delete cascade on update cascade,
